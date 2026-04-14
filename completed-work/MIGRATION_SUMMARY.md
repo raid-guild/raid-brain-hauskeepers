@@ -56,6 +56,5 @@ We completed a full ground-up rebuild of the DAOhaus admin app as a standalone V
 
 ## What This Means for Future RG Clients
 
-- **Monorepo extraction is a repeatable pattern.** The inlining approach (copy packages as local source, modernize in place) is lower risk than attempting to migrate while keeping the monorepo intact. Document this as a recommended approach.
 - **LLM-optimized structure matters.** The `app/` / `features/` / `lib/` split with minimal alias surface was explicitly designed to be navigable by AI agents, not just humans. This is a selling point for the AI maintenance offering.
 - **Dependency modernization is bundleable.** Clients often resist large dependency upgrades because they seem risky. Running them as a single structured sprint (wagmi, react-query, react-router, React all in one pass) proved faster and less disruptive than incremental upgrades.
