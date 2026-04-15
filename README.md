@@ -4,25 +4,21 @@ Knowledge base for the **DAOhaus Infrastructure Modernization & AI-Assisted Main
 
 ---
 
-## What This KB Is For
-
-1. **Drop zone** — capture work summaries, decisions, and tool findings as the raid progresses
-2. **Guild reporting source** — raw material for periodic updates to Raid Guild
-3. **Narrative archive** — structured capture of the story and learnings for use after the raid ends
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the lens all documents should be written through and the rituals for maintaining this KB.
-
----
-
-## Folder Structure
+## Structure
 
 ```
-project-planning/     Planning docs and scope — the what and how of this raid
-proposal/             The original DAOhaus proposal
-completed-work/       Per-workstream summaries as work lands
-tool-evaluations/     One doc per tool evaluated
-guild-updates/        Periodic updates written for Raid Guild
-narrative/            Living docs for the post-raid story and RG positioning
+docs/         Project documents — proposals, planning specs, resources. Drop files here freely.
+summaries/    Generated summaries of completed work and milestones.
+learnings.md  Accumulating learnings for Raid Guild and future clients.
+CLAUDE.md     Instructions and workflow definitions for AI agents working in this KB.
 ```
 
 ---
+
+## Workflows
+
+See [CLAUDE.md](CLAUDE.md) for full instructions. Two workflows are defined:
+
+**Generate Summary** — tell the agent which files to draw from and what framing to use. Output lands in `summaries/`.
+
+**Output Learnings** — tell the agent to extract learnings from a set of files or summaries. Output accumulates in `learnings.md`.
