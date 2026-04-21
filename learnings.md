@@ -30,11 +30,53 @@ An agent asked to work on the proposal feature can read `features/proposal/` and
 
 ### Write documentation for LLMs, not just humans
 
-_First captured: April 2026_
+_First captured: April 2026 — expanded April 2026_
 
 Most documentation is written for humans to read once. AI agents re-read docs on every session. Practices that improved agent output: consistent heading structure, explicit statement of assumptions and constraints, documenting "why" decisions were made (not just what), keeping docs colocated with the code they describe.
 
 LLMs reason over text. Well-structured, explicit documentation measurably improves the quality of AI agent output. This is a service RG can deliver — LLM-optimized documentation is a distinct deliverable, not just a side effect of writing good docs.
+
+In practice, the docs layer that delivered the most signal per word was the local `AGENT.md` file — short, scoped to one folder, answering: what belongs here, what doesn't, where to look next. Ten of these files now cover the major feature and library areas in the DAOhaus repo. The format is repeatable across any project with a meaningful folder structure.
+
+---
+
+### Colocated docs outperform remote wikis for AI agents
+
+_First captured: April 2026_
+
+We placed `AGENT.md` files directly inside the folders they describe rather than consolidating everything into a central wiki or `docs/` directory. During editing, an agent reading nearby files naturally encounters the relevant guide. A remote wiki requires a deliberate lookup that agents frequently skip.
+
+For clients who already have a Notion or Confluence wiki, the pitch is direct: the wiki describes the project, `AGENT.md` files guide the agent while it works. Both can coexist; they serve different moments. Colocated docs also go stale more slowly because the cost of updating them is low — they live in the same PR as the code change.
+
+---
+
+### A reusable LLM system prompt is a first-class deliverable
+
+_First captured: April 2026_
+
+We produced a copyable system/developer prompt block (`docs/006_prompt_for_llm_maintainer.md`) that encodes reading order, layer ownership, and fix-reporting discipline for the DAOhaus repo. Any agent or contractor dropped into the codebase can use it immediately without a separate orientation session.
+
+This prompt template is distinct from documentation — it is operational instruction, not reference material. It is the thing a client pastes into their AI coding tool to get consistent, on-pattern behavior. RG can offer it as a named deliverable ("AI onboarding prompt") in maintenance setup engagements. It is low cost to produce and high value to the client because it compounds: every future agent session benefits from it.
+
+---
+
+### Symptom-based debugging docs are more useful than architecture docs during active maintenance
+
+_First captured: April 2026_
+
+We created `docs/DEBUGGING.md` as a symptom-to-file mapping: "proposal action state is wrong → start here," "Safe balances missing → check this hook." This is structurally different from `docs/ARCHITECTURE.md`, which explains how the system works.
+
+During a maintenance engagement, bugs arrive as user reports, not architecture questions. A debugging guide that maps real symptoms to likely code paths reduces the time from report to first relevant file. In testing against the DAOhaus repo, a new engineer with a bug report could identify an initial file path in under a minute using the guide. Architecture docs explain the happy path; debugging docs are used when the happy path has failed.
+
+---
+
+### Build documentation in two passes: ship fast, then gap-analyze
+
+_First captured: April 2026_
+
+The first pass produced ten `AGENT.md` files and a root-level architecture doc quickly, focusing on the most stable and high-value folders. A second pass — done as a fresh-eyes review — caught stale doc indexes, non-portable Markdown links, and five areas lacking coverage that would have quietly degraded agent usefulness over time.
+
+The two-pass approach avoids two failure modes: spending too long on documentation before it has been tested in practice, and shipping docs that deteriorate immediately because no one audited them after the first rush. For future engagements, budget the second pass explicitly — it is not overhead, it is where the quality lands.
 
 ---
 
