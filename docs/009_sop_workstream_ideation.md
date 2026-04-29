@@ -1,4 +1,4 @@
-## DAOhaus Maintenance SOP Packet — Planning Outline
+## DAOhaus Maintenance SOP Packet — Outline Draft
 
 ### Section 1: System Overview & Architecture
 
