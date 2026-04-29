@@ -18,7 +18,7 @@
 **Dependencies**
 
 - Sam: Architecture diagram and Repository map drafts will be produced on the Architecture & documentation workstream
-- Sam: Add main website and docus website here
+- Sam: Add main website and docs website here
 
 ### Section 2: Infrastructure Inventory & Dependencies
 
@@ -40,7 +40,7 @@
 
 **Dependencies**
 
-- Sam: I'll take a pass at collecting these inputs from docs and earlier workstream output
+- Sam: I'll take a pass at collecting these inputs
 
 ### Section 3: Access & Credential Management
 
