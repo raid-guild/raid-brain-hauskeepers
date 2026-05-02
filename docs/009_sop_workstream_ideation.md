@@ -8,17 +8,13 @@
 
 - Current repo inventory (active vs. deprecated)
 - Existing architecture docs
+- Working input notes: [System Overview & Architecture Inputs](./012_system_overview_architecture_inputs.md)
 
 **To be authored:**
 
 - High-level system narrative — what DAOhaus does, who uses it, what "live" means for this protocol
 - Architecture diagram: frontend → contracts → indexer → data flow
 - Repository map: active repos clearly labeled, deprecated repos clearly marked, purpose of each
-
-**Dependencies**
-
-- Sam: Architecture diagram and Repository map drafts will be produced on the Architecture & documentation workstream
-- Sam: Add main website and docs website here
 
 ### Section 2: Infrastructure Inventory & Dependencies
 
