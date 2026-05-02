@@ -4,12 +4,12 @@
 
 | Subdomain                | Hosted On                               | Repo                                                                          | Next Steps                        |
 | ------------------------ | --------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------- |
-| `daohaus.club` (root)    | Netlify (`daohaus-website.netlify.app`) | —                                                                             | Move to Railway                   |
-| `www.daohaus.club`       | Netlify (`daohaus-website.netlify.app`) | —                                                                             | Move to Railway                   |
+| `daohaus.club` (root)    | Railway (`uyqu7cpc.up.railway.app`)     | [HausDAO/website](https://github.com/HausDAO/website)                         | —                                 |
+| `www.daohaus.club`       | Railway (`s6yflix4.up.railway.app`)     | [HausDAO/website](https://github.com/HausDAO/website)                         | —                                 |
 | `app.daohaus.club`       | Netlify (`daohaus-app.netlify.app`)     | —                                                                             | —                                 |
 | `admin.daohaus.club`     | Railway                                 | [HausDAO/daohaus-admin](https://github.com/HausDAO/daohaus-admin)             | —                                 |
-| `docs.daohaus.club`      | Vercel                                  | —                                                                             | Move to Railway; confirm with e2t |
-| `guide.daohaus.club`     | Vercel                                  | —                                                                             | Move to Railway; confirm with e2t |
+| `docs.daohaus.club`      | Railway (`n935165g.up.railway.app`)     | [HausDAO/dev-docs](https://github.com/HausDAO/dev-docs)                       | —                                 |
+| `guide.daohaus.club`     | Railway (`beg52zqo.up.railway.app`)     | [HausDAO/user-guide](https://github.com/HausDAO/user-guide)                   | —                                 |
 | `decode.daohaus.club`    | Vercel (sam's personal)                 | [HausDAO/proposal-decode-api](https://github.com/HausDAO/proposal-decode-api) | Move or deprecate                 |
 | `links.daohaus.club`     | Vercel                                  | —                                                                             | Deprecate after cataloging links  |
 | `summon.daohaus.club`    | Cloudflare Pages                        | —                                                                             | Deprecate with docs update        |
@@ -54,6 +54,14 @@ _Domain: `daohaus.club` — All TTLs: 3600_
 
 ---
 
+## ALIAS Records
+
+| Hostname        | Type  | Value                       | Status | Notes                         |
+| --------------- | ----- | --------------------------- | ------ | ----------------------------- |
+| `daohaus.club`  | ALIAS | `uyqu7cpc.up.railway.app`   | Active | Root domain → Railway website |
+
+---
+
 ## CNAME Records — App Routing
 
 | Hostname                   | Type  | Value                                 | Status                                | Notes                                                 |
@@ -63,14 +71,15 @@ _Domain: `daohaus.club` — All TTLs: 3600_
 | `dapp.daohaus.club`        | CNAME | `e72a6be83867ccfdd531.b-cdn.net`      | Deprecated 4.29.2026                  | DApp (BunnyCDN)                                       |
 | `data.daohaus.club`        | CNAME | `d2bzc58nkck701.cloudfront.net`       | Deprecated 4.29.2026                  | Data API endpoint (CloudFront)                        |
 | `decode.daohaus.club`      | CNAME | `b138d47b2173e4ad.vercel-dns-017.com` | Active                                | Decode app used in rg proposal notifications (Vercel) |
-| `docs.daohaus.club`        | CNAME | `cname.vercel-dns.com`                | Active                                | Documentation site (Vercel)                           |
-| `guide.daohaus.club`       | CNAME | `cname.vercel-dns.com`                | Active                                | Guide/docs (Vercel)                                   |
+| `docs.daohaus.club`        | CNAME | `n935165g.up.railway.app`             | Active                                | Documentation site (Railway)                          |
+| `guide.daohaus.club`       | CNAME | `beg52zqo.up.railway.app`             | Active                                | Guide/docs (Railway)                                  |
 | `links.daohaus.club`       | CNAME | `cname.vercel-dns.com`                | TODO: Deprated after cataloging links | Links page (Vercel)                                   |
 | `migrate.daohaus.club`     | CNAME | `lvdb2kcg.up.railway.app`             | Deprecated 4.29.2026                  | Migration tool (Railway)                              |
 | `safe-summon.daohaus.club` | CNAME | `summon-safe.pages.dev`               | Deprecated 4.29.2026                  | Safe summoner (Cloudflare Pages)                      |
 | `shadow.daohaus.club`      | CNAME | `q79j0thc.up.railway.app`             | Deprecated 4.29.2026                  | Shadow app (Railway)                                  |
 | `storybook.daohaus.club`   | CNAME | `storybook-2i6.pages.dev`             | Deprecated 4.29.2026                  | Storybook component library (Cloudflare Pages)        |
 | `summon.daohaus.club`      | CNAME | `summon.pages.dev`                    | TODO: Deprecate with docs update      | DAO Summoner (Cloudflare Pages)                       |
+| `www.daohaus.club`         | CNAME | `s6yflix4.up.railway.app`             | Active                                | www → Railway website                                 |
 
 ---
 
@@ -106,7 +115,7 @@ _Domain: `daohaus.club` — All TTLs: 3600_
 | `cco.daohaus.club`           | NETLIFY | `laughing-euclid-dcc231.netlify.app`    | Active               | CCO (Community Contribution Offering) app       |
 | `cco3.daohaus.club`          | NETLIFY | `laughing-euclid-dcc231.netlify.app`    | Deprecated 4.29.2026 | CCO v3 — same Netlify target as cco             |
 | `daogroni.daohaus.club`      | NETLIFY | `dreamy-leakey-760c51.netlify.app`      | —                    | DAOgroni app                                    |
-| `daohaus.club`               | NETLIFY | `daohaus-website.netlify.app`           | —                    | Root domain → main website                      |
+| `daohaus.club`               | NETLIFY | `daohaus-website.netlify.app`           | Deprecated 5.2.2026  | Root domain moved to Railway                    |
 | `farm.daohaus.club`          | NETLIFY | `silly-nightingale-84955d.netlify.app`  | —                    | Farm app                                        |
 | `freeryder.daohaus.club`     | NETLIFY | `extraordinary-lily-76e6cf.netlify.app` | Deprecated 4.29.2026 | Free Ryder                                      |
 | `hats-demo.daohaus.club`     | NETLIFY | `gorgeous-sable-84c11f.netlify.app`     | Deprecated 4.29.2026 | Hats Protocol integration demo                  |
@@ -121,7 +130,7 @@ _Domain: `daohaus.club` — All TTLs: 3600_
 | `stats.daohaus.club`         | NETLIFY | `practical-edison-84de96.netlify.app`   | TODO: Deprecate      | Stats dashboard — same Netlify target as report |
 | `v2-web.daohaus.club`        | NETLIFY | `daohaus-website.netlify.app`           | —                    | V2 website — same Netlify target as www         |
 | `whispers.daohaus.club`      | NETLIFY | `transcendent-crepe-b58ddc.netlify.app` | Deprecated 4.29.2026 | Whispers — same Netlify target as proposals     |
-| `www.daohaus.club`           | NETLIFY | `daohaus-website.netlify.app`           | —                    | www → main website                              |
+| `www.daohaus.club`           | NETLIFY | `daohaus-website.netlify.app`           | Deprecated 5.2.2026  | www moved to Railway                            |
 | `yeet.daohaus.club`          | NETLIFY | `admiring-johnson-bc0a30.netlify.app`   | —                    | Yeet app                                        |
 
 ---
@@ -131,7 +140,12 @@ _Domain: `daohaus.club` — All TTLs: 3600_
 | Hostname                               | Type | Value                                                                                              | Status               | Notes                                               |
 | -------------------------------------- | ---- | -------------------------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------- |
 | `_amazonses.daohaus.club`              | TXT  | `cFxzIKza7GO3kx8p5DcZjXq+rstF9U+9uT/HuE0T6Ls=`                                                     | —                    | Amazon SES domain verification                      |
+| `_railway-verify.daohaus.club`         | TXT  | `railway-verify=7ae8cdeaee918848ddbdb07ee18bbceb099de786adeb5a0c8d0f0c3bb1bd3e00`                  | Active               | Railway domain verification for docs/root setup     |
+| `_railway-verify.daohaus.club`         | TXT  | `railway-verify=e2e02ec22ad7fe7554607c91fc0416740fc475889400e4ea4dbe4209c7ad4499`                  | Active               | Railway domain verification for root domain         |
+| `_railway-verify.docs.daohaus.club`    | TXT  | `railway-verify=7ae8cdeaee918848ddbdb07ee18bbceb099de786adeb5a0c8d0f0c3bb1bd3e00`                  | Active               | Railway domain verification for docs                |
+| `_railway-verify.guide.daohaus.club`   | TXT  | `railway-verify=1ddbf7b0e50f8130ea6141d00a8a6256c63bf5ecc24e776b28d22346473e0edf`                  | Active               | Railway domain verification for guide               |
 | `_railway-verify.migrate.daohaus.club` | TXT  | `railway-verify=f9e3b935e061b8936c5d675a5d08cf1fc753a8f4e39dd053d970bb33ef2cab49`                  | Deprecated 4.29.2026 | Railway domain verification for migrate subdomain   |
+| `_railway-verify.www.daohaus.club`     | TXT  | `railway-verify=95f09d77917d129a6aeb164e4e3939eb55773ab387458fc7da454b7c3d80412f`                  | Active               | Railway domain verification for www                 |
 | `_vercel.daohaus.club`                 | TXT  | `vc-domain-verify=decode.daohaus.club,b8991e211330fb8e3e33`                                        | —                    | Vercel domain verification for decode               |
 | `_vercel.daohaus.club`                 | TXT  | `vc-domain-verify=docs.daohaus.club,7679e98382e730821e8e`                                          | —                    | Vercel domain verification for docs                 |
 | `_vercel.daohaus.club`                 | TXT  | `vc-domain-verify=guide.daohaus.club,88f627d952641a3b74fb`                                         | —                    | Vercel domain verification for guide                |

@@ -27,6 +27,7 @@
 - The Graph deployment details
 - RPC providers in use
 - Any third-party APIs or services (wallet connectors, token sequencers)
+- Working input notes: [Infrastructure Inventory & Dependencies Inputs](./013_infrastructure_inventory_dependencies_inputs.md)
 
 **To be authored:**
 
@@ -50,7 +51,6 @@
 **To be authored:**
 
 - Access matrix: system → current holders → access level → how to gain/revoke access
-- Key rotation procedures
 - Onboarding checklist for a new maintainer (what access do they need and how do they get it)
 - Offboarding checklist
 

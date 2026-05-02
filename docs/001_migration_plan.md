@@ -1058,7 +1058,7 @@ This is the same Etherscan v2 migration noted in Phase 6 — do it here since th
 
 #### 5b.1 Route, Layout, and App Shell
 
-- Add a new route in [router.tsx](/home/skuhl/Documents/ody/haus/haus-admin/src/router.tsx) at `/summon`
+- Add a new route in `haus-admin/src/router.tsx` at `/summon`
 - Decide layout strategy:
   - Preferred: render summon inside the existing `HomeContainer` / `AppLayout` shell for visual consistency and less duplicated nav/footer code
   - Alternative: keep a dedicated centered layout if we want summon to feel more campaign/landing-page-like
