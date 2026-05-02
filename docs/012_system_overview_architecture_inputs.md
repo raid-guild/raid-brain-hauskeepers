@@ -2,7 +2,7 @@
 
 Working notes for Section 1 of the DAOhaus Maintenance SOP Packet: System Overview & Architecture.
 
-This doc collects the raw inputs needed to author the high-level system narrative, architecture diagram, and repository map described in [009_sop_workstream_ideation.md](/home/skuhl/Documents/ody/haus/hauskeeper-raid-kb/docs/009_sop_workstream_ideation.md).
+This doc collects the raw inputs needed to author the high-level system narrative, architecture diagram, and repository map described in [009_sop_workstream_ideation.md](./009_sop_workstream_ideation.md).
 
 ## Starter System Narrative
 

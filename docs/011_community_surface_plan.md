@@ -41,23 +41,13 @@ This doc is the place to plan, track, and summarize the cleanup of DAOhaus publi
 
 ### GitHub Organization and Repositories
 
-- [ ] Create or update a canonical repository map for `https://github.com/HausDAO`.
-- [ ] Label active repositories clearly.
-- [ ] Mark unused repositories as deprecated.
-- [ ] Preserve legacy repositories for historical access.
-- [ ] Clarify which repositories are actively maintained.
-- [ ] Update README files for active repositories.
-- [ ] Update README files for inactive repositories with deprecation language.
-- [ ] Confirm canonical active repositories:
-  - [HausDAO/daohaus-admin](https://github.com/HausDAO/daohaus-admin)
-  - [HausDAO/daohaus-subgraph](https://github.com/HausDAO/daohaus-subgraph)
-  - [HausDAO/Baal](https://github.com/HausDAO/Baal)
-- [ ] Update README for [HausDAO/daohaus-admin](https://github.com/HausDAO/daohaus-admin) to indicate it is canonical/active.
-- [ ] Update README for [HausDAO/daohaus-subgraph](https://github.com/HausDAO/daohaus-subgraph) to indicate it is canonical/active.
-- [ ] Review [HausDAO/Baal](https://github.com/HausDAO/Baal) README for active maintenance language.
-- [ ] Deprecate or remove monorepo workflows where no longer relevant.
-- [ ] Remove or redirect outdated SDK documentation from active repository READMEs.
-- [ ] Document final GitHub repo structure in the maintenance packet.
+- [x] Create or update a canonical repository map for `https://github.com/HausDAO`.
+- [x] Label active repositories clearly.
+- [x] Mark unused repositories as deprecated.
+- [x] Preserve legacy repositories for historical access.
+- [x] Clarify which repositories are actively maintained.
+- [x] Deprecate or remove monorepo workflows where no longer relevant.
+- [x] Document final GitHub repo structure in the maintenance packet.
 
 Suggested inactive repo notice:
 
