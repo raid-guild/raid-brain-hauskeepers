@@ -2,21 +2,21 @@
 
 ## Active Subdomains
 
-| Subdomain                | Hosted On                               | Repo                                                                          | Next Steps                        |
-| ------------------------ | --------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------- |
-| `daohaus.club` (root)    | Railway (`uyqu7cpc.up.railway.app`)     | [HausDAO/website](https://github.com/HausDAO/website)                         | —                                 |
-| `www.daohaus.club`       | Railway (`s6yflix4.up.railway.app`)     | [HausDAO/website](https://github.com/HausDAO/website)                         | —                                 |
-| `app.daohaus.club`       | Netlify (`daohaus-app.netlify.app`)     | —                                                                             | —                                 |
-| `admin.daohaus.club`     | Railway                                 | [HausDAO/daohaus-admin](https://github.com/HausDAO/daohaus-admin)             | —                                 |
-| `docs.daohaus.club`      | Railway (`n935165g.up.railway.app`)     | [HausDAO/dev-docs](https://github.com/HausDAO/dev-docs)                       | —                                 |
-| `guide.daohaus.club`     | Railway (`beg52zqo.up.railway.app`)     | [HausDAO/user-guide](https://github.com/HausDAO/user-guide)                   | —                                 |
-| `decode.daohaus.club`    | Vercel (sam's personal)                 | [HausDAO/proposal-decode-api](https://github.com/HausDAO/proposal-decode-api) | Move or deprecate                 |
-| `links.daohaus.club`     | Vercel                                  | —                                                                             | Deprecate after cataloging links  |
-| `summon.daohaus.club`    | Cloudflare Pages                        | —                                                                             | Deprecate with docs update        |
-| `cco.daohaus.club`       | Netlify                                 | —                                                                             | —                                 |
-| `proposals.daohaus.club` | Netlify                                 | —                                                                             | —                                 |
-| `speedball.daohaus.club` | Netlify                                 | —                                                                             | —                                 |
-| `stats.daohaus.club`     | Netlify                                 | —                                                                             | —                                 |
+| Subdomain                | Hosted On                           | Repo                                                                          | Next Steps                       |
+| ------------------------ | ----------------------------------- | ----------------------------------------------------------------------------- | -------------------------------- |
+| `daohaus.club` (root)    | Railway (`uyqu7cpc.up.railway.app`) | [HausDAO/website](https://github.com/HausDAO/website)                         | —                                |
+| `www.daohaus.club`       | Railway (`s6yflix4.up.railway.app`) | [HausDAO/website](https://github.com/HausDAO/website)                         | —                                |
+| `app.daohaus.club`       | Netlify (`daohaus-app.netlify.app`) | —                                                                             | —                                |
+| `admin.daohaus.club`     | Railway                             | [HausDAO/daohaus-admin](https://github.com/HausDAO/daohaus-admin)             | —                                |
+| `docs.daohaus.club`      | Railway (`n935165g.up.railway.app`) | [HausDAO/dev-docs](https://github.com/HausDAO/dev-docs)                       | —                                |
+| `guide.daohaus.club`     | Railway (`beg52zqo.up.railway.app`) | [HausDAO/user-guide](https://github.com/HausDAO/user-guide)                   | —                                |
+| `decode.daohaus.club`    | Vercel (sam's personal)             | [HausDAO/proposal-decode-api](https://github.com/HausDAO/proposal-decode-api) | Move or deprecate                |
+| `links.daohaus.club`     | Vercel                              | —                                                                             | Deprecate after cataloging links |
+| `summon.daohaus.club`    | Cloudflare Pages                    | —                                                                             | Deprecate with docs update       |
+| `cco.daohaus.club`       | Netlify                             | —                                                                             | —                                |
+| `proposals.daohaus.club` | Netlify                             | —                                                                             | —                                |
+| `speedball.daohaus.club` | Netlify                             | —                                                                             | —                                |
+| `stats.daohaus.club`     | Netlify                             | —                                                                             | —                                |
 
 ---
 
@@ -56,9 +56,9 @@ _Domain: `daohaus.club` — All TTLs: 3600_
 
 ## ALIAS Records
 
-| Hostname        | Type  | Value                       | Status | Notes                         |
-| --------------- | ----- | --------------------------- | ------ | ----------------------------- |
-| `daohaus.club`  | ALIAS | `uyqu7cpc.up.railway.app`   | Active | Root domain → Railway website |
+| Hostname       | Type  | Value                     | Status | Notes                         |
+| -------------- | ----- | ------------------------- | ------ | ----------------------------- |
+| `daohaus.club` | ALIAS | `uyqu7cpc.up.railway.app` | Active | Root domain → Railway website |
 
 ---
 
