@@ -80,7 +80,7 @@ Suggested inactive repo notice:
 
 - [x] Create or link architecture diagram: frontend -> contracts -> indexer -> data flow.
 - [x] Document active third-party service dependencies.
-- [ ] Document active servers/hosting services.
+- [x] Document active servers/hosting services.
 - [x] Complete environment variable inventory.
 - [x] Identify any public-facing docs that should link to the architecture/dependency overview.
 

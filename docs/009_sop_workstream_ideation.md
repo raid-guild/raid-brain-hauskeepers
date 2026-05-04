@@ -18,117 +18,71 @@
 
 ### Section 2: Infrastructure Inventory & Dependencies
 
-**Purpose:** Complete picture of every external system DAOhaus depends on.
+**Purpose:** Complete picture of every infrastructure-related system DAOhaus depends on, including who can access it, how it is deployed, how domains are managed, and how indexing is maintained.
 
 **Inputs needed:**
 
-- Current hosting provider(s) and configs
-- Domain registrar(s) and DNS setup
-- The Graph deployment details
-- RPC providers in use
-- Any third-party APIs or services (wallet connectors, token sequencers)
-- Working input notes: [Infrastructure Inventory & Dependencies Inputs](./013_infrastructure_inventory_dependencies_inputs.md)
-
-**To be authored:**
-
-- Infrastructure dependency table: service → purpose → owner/contact → renewal/cost info
-- Network/chain coverage map (which chains, which subgraphs)
-- Single points of failure callouts
-
-### Section 3: Access & Credential Management
-
-**Purpose:** Who has the keys to what, and how does access get transferred or revoked.
-
-**Inputs needed:**
-
-- Current access holders for: GitHub org, hosting platforms, DNS, any API keys
+- Access holders for GitHub org, hosting platforms, DNS, API keys, The Graph, and related services
   - github: free, many owners who were previous contributors: https://github.com/orgs/HausDAO/people
   - railway: odyssy paid instance (dh infra reimburse)
   - refactory access - need to define how this is granted
   - dns is in odyssy control
+- Current hosting provider(s), deployment configs, and CI/CD triggers
+  - there is some of the [gitflow for ci here](https://github.com/raid-guild/raid-brain-hauskeepers/blob/master/docs/008_issue_and_git_flow.md)
+  - admin app, website, docs, guide all in railway now
+- Environment variable inventory
+  - doc in the admin app
+- Domain registrar(s), DNS providers, current record inventory, and renewal details
+- The Graph deployment details, active subgraphs, billing/query balance process, and supported networks
+- RPC providers and any third-party APIs or services (wallet connectors, token sequencers)
+- Working input notes: [Infrastructure Inventory & Dependencies Inputs](./013_infrastructure_inventory_dependencies_inputs.md)
+
+**To be authored:**
+
+- Infrastructure dependency table: service → purpose → owner/contact → renewal/cost info → access requirements
+- Access matrix: system → current holders → access level → how to gain/revoke access
+- Deployment runbook for the admin app, website, guide, and docs sites
+- Domain inventory with registrar, expiry, DNS provider, renewal owner, and active-use notes
+- DNS record map and renewal SOP
+- Network/chain coverage map: supported chains, active subgraphs, deployment IDs, and query balance status
+- Subgraph operations runbook: deploy/update, monitor indexing health, and add to query balance
+- Single points of failure callouts
+
+**Subsections:**
+
+#### Access & Credential Management
+
+- Current access holders for each infrastructure system
 - How to get new credentials or request access
   - see 013_infrastructure_inventory_dependencies_inputs.md
   - most dependencies are free tier and any contributor can get an account and get key
   - see doc for the graph details as it has the most restricted dependencies
+- Onboarding checklist for a new maintainer
+- Offboarding and access revocation checklist
 
-**To be authored:**
+#### Deployment & Hosting Operations
 
-- Access matrix: system → current holders → access level → how to gain/revoke access
-- Onboarding checklist for a new maintainer (what access do they need and how do they get it)
-- Offboarding checklist
-
-### Section 4: Deployment & Hosting Operations
-
-**Purpose:** Step-by-step procedures for deploying and updating live systems.
-
-**Inputs needed:**
-
-- Current deployment pipeline (CI/CD setup, what triggers what)
-  - there is some of the [gitflow for ci here](https://github.com/raid-guild/raid-brain-hauskeepers/blob/master/docs/008_issue_and_git_flow.md)
-- Hosting platform details (Railway)
-  - admin app, website, docs, guide all in railway now
-- Environment variable inventory
-  - doc in the admin app
-
-**To be authored:**
-
-- Deployment runbook for the admin app, website and docs sites
-- Documentation site deployment procedure
+- Hosting platform details
+- Deployment pipeline and CI/CD triggers
 - Environment variable reference
+- Deployment and rollback procedures
 
-### Section 5: The Graph Indexer Management
+#### Domain & DNS Management
 
-**Purpose:** Keeping subgraph indexing healthy across supported networks.
-
-**Inputs needed:**
-
-- All active subgraph deployments (IDs, networks, hosted vs. decentralized)
-- Document processes to monitor billing and top off query fee balances
-- Most of the content can be found here: https://docs.daohaus.club/contributing/subgraphs
-
-**To be authored:**
-
-- Subgraph inventory table
-- How to deploy/update a subgraph
-- How to monitor indexing health
-- How to add to query balance
-
-### Section 6: Domain & DNS Management
-
-**Purpose:** Keep domains registered and pointed correctly.
-
-**Inputs needed:**
-
-- All domains in use
-- Registrar accounts
-- DNS provider and current record inventory
-- Renewal calendar
-
-**To be authored:**
-
-- Domain inventory with registrar, expiry, and renewal owner
-- DNS record map
+- Domain inventory
+- Registrar ownership and renewal calendar
+- DNS provider and active record map
 - Renewal SOP and alert setup recommendation
 
-### Section 7: Routine Maintenance Procedures
+#### The Graph Indexer Management
 
-**Purpose:** The recurring tasks that keep things healthy
+- Active subgraph deployments
+- How to deploy/update a subgraph
+- How to monitor indexing health
+- How to monitor billing and add to query balance
+- Most of the content can be found here: https://docs.daohaus.club/contributing/subgraphs
 
-**Inputs needed:**
-
-- We need to define this more in relation to the automation workstream
-- Known recurring tasks (dependency updates, subgraph checks, etc.); **NEED TO DEFINE**
-
-**To be authored:**
-
-- Document what processes the automations perform and how they load into the traige workflows
-- How a maintainer can monitor/what to expect
-
-**Dependencies**
-
-- Sam: This should mostly come out of the automation workstream
-
-### Section 8: AI-Assisted Maintenance Workflows
+### Section 3: AI-Assisted Maintenance Workflows
 
 **Purpose:** How the human maintainer works with the agentic systems set up in Workstream 3.
 
@@ -137,20 +91,25 @@
 - Refactory environment overview and configuration
 - GitHub issue management flow design
 - Defined human-in-the-loop decision points
+- Known recurring tasks: dependency updates, subgraph checks, deployment checks, issue triage, API monitoring, and activity reporting
 - [See this doc for a start](https://github.com/raid-guild/raid-brain-hauskeepers/blob/master/docs/008_issue_and_git_flow.md)
 
 **To be authored:**
 
 - Overview of the AI maintenance system and what it handles autonomously vs. what escalates to a human
+- Routine maintenance procedures performed by the AI maintenance system
+- Recurring task schedule and expected outputs
+- How recurring automation feeds into issue triage workflows
 - Issue triage workflow: how issues enter, how they get labeled/routed, what the AI does, when human reviews
 - Code analysis and PR assistance workflow
 - Monitoring and escalation flow (what triggers an alert, how it surfaces, what human action looks like)
+- How a maintainer monitors AI maintenance activity and knows what to expect
 
 **Dependencies**
 
 - Sam: This should mostly come out of the automation workstream
 
-### Section 9: Stewardship Transition Guide
+### Section 4: Stewardship Transition Guide
 
 **Purpose:** How to hand off maintainership if/when that becomes necessary.
 
