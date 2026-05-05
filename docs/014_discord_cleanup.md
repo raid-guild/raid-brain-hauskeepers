@@ -62,24 +62,45 @@
 
 ## Proposed New Structure
 
-Todo:
+### Summary Of Work Completed
 
-- what mod stuff do we still need?
-  - gatehaus seems like only needed thing
-- rewrite welcome
-  - point to support channel
-- rewrite publichaus info
-- rewrite Protocol-info
-- #support channel
-  - consider a user guide trained bot vs. intake bot?
-  - #bug-reports vs. #support
-    - cr intake locked to a new role
-      - user puts into #support
-      - agent assesses, gates and moves to intake at #bug-reports (rename to #change-requests)
-- Protocol
-  - #rage-ships
-    - update webhooks
-    - CR flow updates
+The Discord cleanup has been largely completed. The server guide, welcome flow, and
+Protocol info surfaces have been rewritten; mod-only channels and community
+onboarding have been cleaned up; and `#rage-ships` webhooks now trigger from the
+canonical repos.
+
+The updated server shape is centered on a smaller set of active channels and
+roles:
+
+- [x] edit server guide
+- [x] mod channel cleanup
+- [x] rewrite welcome
+- [x] rewrite Protocol-info
+- [x] update #rage-ships webhooks now triggering off canonical repos
+- [x] cleanout community onboarding
+- [x] define support flow
+  - `#support` remains the public channel for questions and bug reports
+  - Prism bot screens intake and moves confirmed reports into view-only
+    `#bug-reports`
+  - CR intake is locked to the new `hauskeeper` role
+
+**New active roles**
+
+- basic visitor
+- warcamp (admin)
+- hauskeeper
+
+### Current Status
+
+The cleanup is ready for the raid workstream to absorb the remaining support
+automation decisions. Channel consolidation and role cleanup are complete enough
+to operate from the proposed structure below. The remaining work is mostly
+coordination and launch communication.
+
+### Open Action Items
+
+- [ ] Implement the support flow as part of the AI maintenance workstream.
+- [ ] Create and publish an announcement post when the raid is shipped.
 
 **Channels**
 
@@ -95,8 +116,6 @@ Todo:
 
 ### PublicHaus
 
-- `#publichaus-info`
-- `#publichaus-chat`
 - `public forum`: `public-forum`
 
 ### Protocol
