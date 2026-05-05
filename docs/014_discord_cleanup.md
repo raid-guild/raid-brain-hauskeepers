@@ -55,7 +55,7 @@
 ## Current Surface Notes
 
 - There are several overlapping general discussion channels: `#tavern`, `#bright-ideas`, `#protocol-chat`, `#product-chat`, and `#publichaus-chat`.
-- Support and bug reporting are split between `#support` and `#bug-reports`.
+- Support and bug reporting are split between `#support` and `#bug-reports` (now `#change-requests`).
 - Activity/reporting surfaces are split between `#news-flash`, `#rage-beats`, `#rage-ships`, `#product-activity`, and `Public HAUS Updates`.
 - Voice channels exist in Public Square, PublicHaus, Protocol, and Products.
 - `#projects`, `#products`, and `#hackathon` may overlap unless they have distinct current uses.
@@ -81,7 +81,7 @@ roles:
 - [x] define support flow
   - `#support` remains the public channel for questions and bug reports
   - Prism bot screens intake and moves confirmed reports into view-only
-    `#bug-reports`
+    `#bug-reports` (now `#change-requests`)
   - CR intake is locked to the new `hauskeeper` role
 
 **New active roles**
@@ -122,7 +122,7 @@ coordination and launch communication.
 
 - `#protocol-info`
 - `#protocol-chat`
-- `#bug-reports`
+- `#bug-reports` ->> `#change-requests`
 - `#rage-ships`
 - `open voice`: `protocol-voice`
 

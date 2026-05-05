@@ -17,7 +17,7 @@ CLAUDE.md     Instructions and workflow definitions for AI agents working in thi
 
 ## Workflows
 
-See [CLAUDE.md](CLAUDE.md) for full instructions. Two workflows are defined:
+See [AGENT.md](AGENT.md) for full instructions. Two workflows are defined:
 
 **Generate Summary** — tell the agent which files to draw from and what framing to use. Output lands in `summaries/`.
 

@@ -40,8 +40,6 @@ The work is organized into several workstreams.
   - Simplified GitHub structure with clear active systems
   - Cleaned and consolidated Discord channels
   - Cleaned and updated public documentation
-  - support bot in discord
-    - maybe in docs app or in discord trained on docs
 
 - **Maintenance SOPs & playbooks**
   - Infrastructure management (hosting, domains, indexing, access)
