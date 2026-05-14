@@ -166,6 +166,7 @@ Common `/agent/*` surfaces include:
 - Tasks.
 - Skills.
 - Workflows.
+- Hooks.
 - Requests.
 - Request artifacts.
 - External refs.
@@ -176,10 +177,32 @@ Durable Prism-managed custom content should be written through the site API:
 
 - Custom skills through `/agent/skills`.
 - Custom workflows through `/agent/workflows`.
+- Custom hooks through `/agent/hooks`.
 - Workflow outputs through request artifact routes.
 - External records such as GitHub PRs, Discord messages, Railway deployments, and publishing targets through external refs.
 
 Codex Runtime can create temporary local files during a run, but durable Prism instance content belongs in the site/API service.
+
+Hook routes:
+
+```text
+GET /agent/hooks
+POST /agent/hooks
+GET /agent/hooks/:key
+PATCH /agent/hooks/:key
+DELETE /agent/hooks/:key
+POST /agent/hooks/:key/trigger
+```
+
+Request artifact routes:
+
+```text
+GET /agent/change-board/requests/by-number/:requestNumber/artifacts
+POST /agent/change-board/requests/:id/artifacts
+GET /agent/change-board/requests/:id/artifacts/:artifactId/content
+```
+
+Browser/admin file uploads use the admin upload route and authenticated admin session. Runtime agents should continue to use the agent artifact API for durable agent-produced outputs.
 
 ## Local Development Boundary
 

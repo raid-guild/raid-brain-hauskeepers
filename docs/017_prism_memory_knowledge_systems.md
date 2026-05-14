@@ -64,6 +64,8 @@ They can sit between memory and knowledge:
 - A meeting transcript is an artifact and may be indexed as memory.
 - A generated report is an artifact and may become a knowledge source after review.
 - A summary produced by Codex may start as an artifact, then be promoted into curated knowledge.
+- A hook payload is an artifact that preserves the exact event body that created a request.
+- A user-uploaded file is an artifact that stays request-local unless a workflow or agent promotes derived content.
 
 Known public artifact URL pattern:
 
@@ -99,6 +101,8 @@ Use Memory when the system needs the record of what happened.
 Use Knowledge when the system needs curated instructions, reference material, or stable context.
 
 Use Artifacts when an execution produced something that should be addressable, reviewable, or linked from a request/workflow.
+
+User uploads should not automatically become Memory or Knowledge. A workflow or agent should explicitly decide whether to summarize the file, index a summary into Knowledge, include it in a request review, or leave it as request-local context only.
 
 Promotion path:
 

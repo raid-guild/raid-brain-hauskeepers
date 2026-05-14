@@ -10,7 +10,7 @@ The site/API owns:
 
 - User-facing state.
 - Execution state.
-- Links between repos, environments, requests, workflows, tasks, skills, scripts, and artifacts.
+- Links between repos, environments, requests, workflows, tasks, hooks, skills, scripts, and artifacts.
 - Internal APIs used by adapters, runtime services, and workers.
 - Operator visibility into what happened, what is running, and what needs review.
 
@@ -62,6 +62,36 @@ Design rule:
 
 ```text
 Keep tasks narrow and runnable.
+```
+
+### Hooks
+
+A hook is an on-demand entrypoint for workflow-backed requests.
+
+Hooks are useful when an external event, service, or agent action should create a request and optionally start a workflow immediately.
+
+Examples:
+
+- GitHub issue webhook creates a request.
+- Discord support escalation creates a request.
+- Publishing system callback resumes a workflow.
+- Third-party automation creates a content request.
+- Codex agent exposes a reusable trigger for another service.
+
+Hooks sit beside tasks:
+
+```text
+tasks = scheduled triggers
+hooks = event/on-demand triggers
+direct requests = UI or agent-created intake
+```
+
+Hooks should stay thin. They should accept a payload, create a request from a small template, preserve the raw payload as a request artifact, and optionally auto-run the workflow until the next gate.
+
+Design rule:
+
+```text
+Keep hooks about trigger intake, not business logic.
 ```
 
 ### Skills And Scripts
@@ -126,6 +156,8 @@ Examples:
 - Review notes.
 - Digest files.
 - Published summaries.
+- Hook payloads.
+- User-uploaded request files.
 
 Artifacts are what the system keeps after execution. They can be linked from requests, executions, workflows, and Prism Memory indexes.
 
@@ -142,6 +174,7 @@ The normal chain is:
 ```text
 Something creates a request
   -> the app decides whether to run a task or workflow
+  -> a hook may create the request from an external payload
   -> the workflow calls skills/scripts
   -> runtime execution produces outputs
   -> outputs are stored as artifacts
@@ -154,8 +187,14 @@ Short form:
 | --- | --- |
 | Request | Intake and intent |
 | Task | Runnable or scheduled unit |
+| Hook | Event/on-demand trigger that creates a request |
 | Skill/script | Reusable capability and implementation |
 | Workflow | Orchestrated process |
 | Artifact | Persisted output or evidence |
 
 The main design rule is: keep requests about intent, workflows about process, and artifacts about outputs. That separation makes the system easier to inspect, retry, index, and hand off.
+
+See also:
+
+- [019_prism_hooks.md](./019_prism_hooks.md)
+- [020_prism_request_file_uploads.md](./020_prism_request_file_uploads.md)
