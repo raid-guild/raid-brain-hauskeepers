@@ -120,3 +120,98 @@ For future client proposals, this has scoping implications. The codebase moderni
 | --------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | Running `npm audit fix --force`               | Produces unexpected breaking upgrades, especially in wallet stacks                            | Audit manually, group changes by risk tier, validate each tier separately |
 | Treating `wagmi 2.x → 3.x` as a routine patch | Major wallet-stack upgrades affect connector behavior, RainbowKit integration, and Safe flows | Treat as a dedicated wallet integration project with regression testing   |
+| Removing or renaming subgraph schema fields as a patch | Fields removed from a subgraph schema silently break apps still querying the old field       | Prefer additive schema changes; audit app queries before any field removal or type change |
+
+---
+
+## AI Maintenance Platform Design
+
+### The agentic maintenance platform is a deployable template, not a bespoke build
+
+_First captured: May 2026_
+
+The Prism Railway Template packages the seven-service agentic maintenance stack (site/API, codex-runtime, prism-memory, discord-adapter, memory-cron, knowledge-cron, discord-sync-cron) into a single Railway template deploy. Each client instance gets its own project, secrets, volumes, and cron configuration — none of which bleeds back into the template.
+
+This changes the economics of the offering. The first engagement bears the setup cost. Subsequent engagements start from a working template and configure rather than build. The template is RG's productized infrastructure for AI-assisted maintenance and should be treated as a maintained internal asset, not a one-off per client.
+
+---
+
+### Human-in-the-loop is a sales feature, not a limitation
+
+_First captured: May 2026_
+
+The DAOhaus maintenance system does not replace the human maintainer — it reduces the groundwork (triage, investigation, branch preparation, reporting) so the maintainer's time goes to decisions. Every gate where status advances requires explicit human confirmation: intake to triage, triage to implementation, branch to review, review to merge.
+
+Framing the system as "the agent handles groundwork, you handle decisions" is more accurate and more persuasive than "fully automated maintenance." Clients who have been burned by runaway automation respond better to a human-in-the-loop architecture. This framing should be the default pitch for AI maintenance setup engagements.
+
+---
+
+### Memory/knowledge split should be a standard setup deliverable
+
+_First captured: May 2026_
+
+Prism distinguishes Memory (time-based operational record — transcripts, digests, agent outputs, activity history) from Knowledge (curated retrievable docs — SOPs, runbooks, architecture notes, stable summaries). The split has a defined promotion path: raw event → artifact → memory index → curated knowledge doc.
+
+Without this distinction, operational noise pollutes the reference layer and future agent sessions surface irrelevant history when querying for "how does this work." For RG engagements, setting up this split early is low cost and compounds: every session benefits from a clean knowledge layer. It should be a line item in the engagement setup checklist, not an afterthought.
+
+---
+
+### Codex device auth is the primary friction point in agentic Railway deployments
+
+_First captured: May 2026_
+
+Codex device auth is a one-time manual step: SSH into the `codex-runtime` service, run the auth flow with `CODEX_HOME` pointing at the mounted volume, and complete the device auth. This step cannot be scripted into a Railway template deploy because it writes account auth into the volume through an interactive device-auth flow.
+
+In practice, this means every new Prism instance requires a human operator on the keyboard for roughly 5–15 minutes after deploy. Budget for it, document it explicitly in the handoff, and do not assume it is automated. Future template iterations should front-load this step in the bring-up checklist rather than letting operators discover it mid-setup.
+
+---
+
+### Two distinct API surfaces prevent agentic misconfiguration
+
+_First captured: May 2026_
+
+The Prism site/API exposes `/admin/*` routes (require an authenticated browser session) and `/agent/*` routes (require a service token via `x-service-token`). Using a service token against an `/admin/*` route returns a `401` that looks like a permissions error but is actually a wrong-surface error.
+
+Runtime agents should always use `PRISM_AGENT_API_BASE_URL` and `PRISM_AGENT_SERVICE_TOKEN`, not admin session credentials. This two-surface separation is a pattern worth standardizing in any multi-service agentic platform RG builds: clear internal and external API boundaries reduce misconfiguration and make auth failures diagnosable.
+
+---
+
+## SOP and Playbook Design
+
+### The 8-document SOP packet structure is reusable across legacy web3 maintenance engagements
+
+_First captured: May 2026_
+
+The DAOhaus Maintenance & Transition Readiness Packet is organized into: overview, system architecture, repo/app inventory, infrastructure/access/dependencies, operational runbooks, AI-assisted workflows, known risks and open items, and stewardship handoff checklist. Each section is standalone — a maintainer can read one without the others.
+
+This structure covers what any legacy web3 maintenance engagement needs to document. RG can template it and adapt section contents to a new client without restructuring. The inventory, access matrix, and risk callout sections are the most project-specific; the runbook and AI workflow sections are the most portable.
+
+---
+
+### Named anti-patterns outperform generic caution in operational runbooks
+
+_First captured: May 2026_
+
+The DAOhaus runbooks name specific dangerous operations with reasons: "Don't run `npm audit fix --force` — it produces silent breaking upgrades in wallet stacks." "Don't treat `wagmi` major upgrades as routine patches — they affect connector behavior, RainbowKit integration, and Safe flows." "Don't remove subgraph schema fields without auditing app queries first."
+
+Generic guidance ("review dependencies carefully," "be cautious with schema changes") is ignored under maintenance pressure. Specific, named anti-patterns with concrete failure modes stay with the operator. For future SOP engagements, surface project-specific anti-patterns during the investigation phase and encode them explicitly — they are the most durable content in the runbook.
+
+---
+
+### The access matrix is the highest-value section for handoff — produce it early
+
+_First captured: May 2026_
+
+An access matrix maps each infrastructure system to its current holders, access level, and how access is granted or revoked. For DAOhaus this covers GitHub org and repos, Railway, DNS, The Graph multisig, Alchemy, WalletConnect, Sequence, and Discord bot credentials. Without this document, a new maintainer has no reliable way to know who holds what or what breaks if that person is unavailable.
+
+Generic SOPs are reproducible from first principles. An access matrix for a specific client is not — it requires discovery work that is hardest to do during a crisis. RG should produce the access matrix in the first week of a maintenance engagement, not as a handoff deliverable. It surfaces single points of failure early and gives the client something immediately actionable.
+
+---
+
+### Explicit scope boundaries prevent both over-reach and under-reaction
+
+_First captured: May 2026_
+
+The DAOhaus SOP packet draws an explicit line around what is "not routine maintainer work": contract upgrades, DNS and registrar changes, The Graph multisig or billing changes, production secrets, and access-control changes. These are not mentioned once and assumed understood — they appear at the start of the operating model section and in the exceptional change runbook.
+
+Without explicit boundaries, a new maintainer may attempt changes outside their lane (over-reach) or freeze during an incident because they're unsure whether a fix is in scope (under-reaction). Both failure modes are avoidable. For future SOP engagements, scope boundary callouts should be a named section, not implied by what the runbooks cover.
