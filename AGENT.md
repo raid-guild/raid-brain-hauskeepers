@@ -10,6 +10,7 @@ The raid's secondary purpose — beyond delivering for DAOhaus — is to **prove
 2. **Future potential clients** — who may read a case study, proposal, or presentation derived from this material
 
 When generating any content in this KB, filter it through that lens:
+
 - What did we learn that RG could apply to a future client?
 - What tools, patterns, or practices are worth standardizing?
 - What would we do differently, and why?
@@ -45,10 +46,10 @@ Be specific. "We improved maintainability" is useless. "We reduced the alias sur
 
 **Steps:**
 
-1. Read `learnings.md` to understand what's already captured (avoid duplicates).
+1. Read `summaries/learnings.md` to understand what's already captured (avoid duplicates).
 2. Read the files or summaries provided by the user — or if none specified, read all files in `summaries/`.
 3. Extract learnings through the lens above. Ask: what patterns, practices, or observations from this work would be valuable to Raid Guild or a future client?
-4. Append new learnings to `learnings.md` with a date stamp. Group them under a relevant heading if one already exists, or create a new one.
+4. Append new learnings to `summaries/learnings.md` with a date stamp. Group them under a relevant heading if one already exists, or create a new one.
 5. Do not duplicate entries that are already captured. Expand existing entries with new evidence if appropriate.
 
 **Format guidance:** Each learning should include: the observation, the concrete evidence for it (what happened, what we saw), and why it matters for RG or future clients.

@@ -21,4 +21,4 @@ See [AGENT.md](AGENT.md) for full instructions. Two workflows are defined:
 
 **Generate Summary** — tell the agent which files to draw from and what framing to use. Output lands in `summaries/`.
 
-**Output Learnings** — tell the agent to extract learnings from a set of files or summaries. Output accumulates in `learnings.md`.
+**Output Learnings** — tell the agent to extract learnings from a set of files or summaries. Output accumulates in `summaries/learnings.md`.
