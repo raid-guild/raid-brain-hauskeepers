@@ -14,79 +14,96 @@
 
 ## Thread
 
-### 1/8
-
-AI transformation is easy to promise and hard to operate.
-
-For mature web3 protocols, the real question is not "can an agent help?"
-
-It is whether the system around that agent is ready.
-
-DAOhaus brought Raid Guild exactly that kind of challenge.
-
-### 2/8
-
-DAOhaus had years of useful history, active community value, and a maintenance surface spread across codebases, docs, Discord channels, infrastructure, dependencies, and contributor knowledge.
-
-That is normal for mature protocols.
-
-It is also where maintenance gets hard.
-
-### 3/8
-
-Raid Guild's job was not to hand DAOhaus over to automation.
-
-The mission was progressive automation:
-
-Make the operating surface clearer first, then layer in AI-assisted workflows with human review at the center.
+### 1/9
 
 Progressive automation beats blind autonomy.
 
-### 4/8
+"AI transformation" pitches assume the agent is the hard part.
 
-The raid focused on four practical moves:
+It isn't.
 
-- Simplify the active software surface
-- Make maintenance knowledge durable
-- Clarify support and stewardship paths
-- Layer in governed AI assistance through Refactory
+The hard part is the surface around it: stale docs, unclear approval paths, scattered context, and production decisions no agent should make alone.
 
-Less magic. More usable operating context.
+### 2/9
 
-### 5/8
+DAOhaus is a mature protocol with years of code and active community value.
 
-DAOhaus received a stronger base for future maintainers:
+Maintenance context spread across repos, docs, Discord, DNS, dependencies, support paths, and contributor memory.
 
-- A clearer Admin App maintenance path
-- More durable architecture and debugging docs
-- Cleaner repo, support, and public surfaces
-- Transition-ready handoff materials
-- AI-assisted workflows governed by humans
+That is not a DAOhaus problem.
 
-### 6/8
+That is the default state of mature web3 software.
 
-The biggest shift was from implicit knowledge to durable operating context.
+### 3/9
 
-That matters because live protocols need more than model capability.
+The lazy move would be to bolt an agent on top and call it modernization.
 
-They need trustworthy docs, clear support paths, known approval gates, and maintainers who can inspect and govern the work.
+We refused.
 
-### 7/8
+Make the system legible first. Then let AI work inside guardrails humans can inspect.
 
-This raid started from Raid Guild AI workflow experimentation and became client delivery.
+No black-box agents touching production. No "trust us, the model has it."
 
-Then client delivery became a repeatable service pattern for mature web3 teams:
+### 4/9
+
+The raid had one job:
+
+turn implicit knowledge into durable operating context.
+
+That meant cutting before adding: clarifying active vs. deprecated surfaces, reducing repo/package indirection, and giving the Admin App a cleaner path for future maintainers.
+
+### 5/9
+
+Some concrete outputs:
+
+The Admin App moved to a clearer standalone structure.
+
+Path aliases went from roughly 12 competing routes to 3 stable roots.
+
+The handoff packet became 8 docs covering architecture, inventory, access, runbooks, AI workflows, risks, and stewardship.
+
+### 6/9
+
+Then we layered in Refactory.
+
+AI-assisted workflows with human review at every meaningful gate: intake, triage, implementation, review, merge, incidents, and production-affecting changes.
+
+The agent handles groundwork.
+
+Humans handle decisions.
+
+### 7/9
+
+DAOhaus walked away with clearer maintainer context: stronger docs, cleaner support surfaces, transition-ready runbooks, and AI assistance that augments humans.
+
+That is the part most "AI ops" pitches skip.
+
+The operating model matters.
+
+### 8/9
+
+This started inside Raid Guild's own AI workflow experiments.
+
+It became client delivery.
+
+Now it is a repeatable pattern:
 
 legacy complexity -> clearer systems -> governed AI assistance -> better maintainer leverage
 
-### 8/8
+Mature web3 teams need this more than another agent demo.
 
-If your protocol has live users, accumulated complexity, and too much maintenance context trapped in old systems, Raid Guild can help turn that surface into a foundation for progressive automation.
+### 9/9
 
-Start a raid: `https://www.raidguild.org/#hire-us`
+If your protocol has live users, scar tissue, and too much context trapped in heads that moved on, that is the work.
 
-Explore Refactory: `https://refactory.superprism.io/`
+We do raids.
+
+Tell us what is hard to maintain:
+
+`https://www.raidguild.org/#hire-us`
 
 ## Optional Case Study CTA
 
 Read the full DAOhaus case study: `[CASE STUDY URL]`
+
+Explore Refactory: `https://refactory.superprism.io/`
