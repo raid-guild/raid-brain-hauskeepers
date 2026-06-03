@@ -50,7 +50,7 @@ Gather these once before drafting final public copy:
 - DAOhaus review posture: draft normally for DAOhaus-owned deliverables, then review after first drafts for tone, claims, and any details that should stay internal.
 - Superprism Refactory naming: approved to name publicly.
 - Lightweight voice/brand guide for each publishing platform: DAOhaus, Raid Guild, and Superprism.
-- Primary CTA across outputs: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/#hire-us`
+- Primary CTA across outputs: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/contact`
 - Secondary CTA across outputs: explore the underlying Refactory tech from Superprism: `https://refactory.superprism.io/`
 - Publish order and dates across DAOhaus, Raid Guild, and Superprism channels.
 - Brand voice constraints for DAOhaus, Raid Guild, and Superprism.
@@ -102,7 +102,7 @@ Guide files:
 
 **CTA options:**
 
-- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/#hire-us`
+- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/contact`
 - Secondary: explore Refactory from Superprism: `https://refactory.superprism.io/`
 - DAOhaus-specific support CTA if relevant after first draft review.
 
@@ -137,7 +137,7 @@ Guide files:
 
 **CTA options:**
 
-- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/#hire-us`
+- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/contact`
 - Secondary: explore Refactory from Superprism: `https://refactory.superprism.io/`
 - DAOhaus-specific support/intake CTA if relevant after first draft review.
 
@@ -175,7 +175,7 @@ Guide files:
 
 **CTA options:**
 
-- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/#hire-us`
+- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/contact`
 - Secondary: explore Refactory from Superprism: `https://refactory.superprism.io/`
 - Read the case study.
 - Join Raid Guild or contribute to future service development.
@@ -214,7 +214,7 @@ Guide files:
 
 **CTA options:**
 
-- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/#hire-us`
+- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/contact`
 - Secondary: explore Refactory from Superprism: `https://refactory.superprism.io/`
 - Read the service one-pager.
 
@@ -254,7 +254,7 @@ Guide files:
 
 **CTA options:**
 
-- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/#hire-us`
+- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/contact`
 - Secondary: explore Refactory from Superprism: `https://refactory.superprism.io/`
 - Read the case study.
 
@@ -338,7 +338,7 @@ Guide files:
 
 **CTA options:**
 
-- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/#hire-us`
+- Primary: reach out to Raid Guild about a similar solution: `https://www.raidguild.org/contact`
 - Secondary: explore Refactory: `https://refactory.superprism.io/`
 - Read the technical architecture explainer.
 

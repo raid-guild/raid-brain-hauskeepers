@@ -100,7 +100,7 @@ We do raids.
 
 Tell us what is hard to maintain:
 
-`https://www.raidguild.org/#hire-us`
+`https://www.raidguild.org/contact`
 
 ## Optional Case Study CTA
 

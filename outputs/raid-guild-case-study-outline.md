@@ -14,7 +14,7 @@ Potential clients, ecosystem funders, DAO operators, Raid Guild members, and par
 
 ## Primary CTA
 
-Reach out to Raid Guild about a similar solution: `https://www.raidguild.org/#hire-us`
+Reach out to Raid Guild about a similar solution: `https://www.raidguild.org/contact`
 
 ## Secondary CTA
 
@@ -195,7 +195,7 @@ CTA copy:
 
 If your protocol has live users, accumulated complexity, and too much maintenance context trapped in old systems, Raid Guild can help turn that surface into a foundation for progressive automation: cleaner systems, durable context, AI-assisted workflows, and human-governed review.
 
-Primary link: `https://www.raidguild.org/#hire-us`
+Primary link: `https://www.raidguild.org/contact`
 
 Secondary link: `https://refactory.superprism.io/`
 

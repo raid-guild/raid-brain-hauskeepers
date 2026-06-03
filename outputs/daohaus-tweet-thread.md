@@ -83,6 +83,5 @@ Contribute: `[CONTRIBUTOR CHANNEL / LINK]`
 
 This maintenance foundation work was completed with support from Raid Guild, with Refactory from Superprism supporting part of the AI-assisted maintenance workflow.
 
-Raid Guild: `https://www.raidguild.org/#hire-us`  
+Raid Guild: `https://www.raidguild.org/contact`  
 Refactory: `https://refactory.superprism.io/`
-

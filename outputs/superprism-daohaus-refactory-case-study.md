@@ -147,5 +147,4 @@ For communities and teams maintaining important software, that is the foundation
 
 Explore Refactory: `https://refactory.superprism.io/`
 
-Need help turning a mature protocol surface into an AI-assisted maintenance environment? Start a raid with Raid Guild: `https://www.raidguild.org/#hire-us`
-
+Need help turning a mature protocol surface into an AI-assisted maintenance environment? Start a raid with Raid Guild: `https://www.raidguild.org/contact`

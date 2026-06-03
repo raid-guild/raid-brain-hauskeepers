@@ -74,7 +74,7 @@ legacy complexity -> clearer systems -> governed AI assistance -> better maintai
 
 Raid Guild can help mature web3 teams walk that road.
 
-Start a raid: `https://www.raidguild.org/#hire-us`
+Start a raid: `https://www.raidguild.org/contact`
 
 Explore Refactory: `https://refactory.superprism.io/`
 
