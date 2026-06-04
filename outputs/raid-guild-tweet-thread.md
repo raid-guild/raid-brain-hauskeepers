@@ -2,7 +2,7 @@
 
 ## Needs
 
-- portal article to link to - when can we allow those to be public?
+- Portal article link once the case study is approved for public release.
 
 ## Suggested Visual Asset
 
@@ -14,73 +14,77 @@
 
 ## Thread
 
-### 1/9
+### 1/10
 
 Progressive automation beats blind autonomy.
 
-"AI transformation" pitches assume the agent is the hard part.
+For mature protocols, the hard part is not asking an agent to help.
 
-It isn't.
+The hard part is making the system legible enough that help is useful: active repos, trusted docs, clear support paths, and human approval where it matters.
 
-The hard part is the surface around it: stale docs, unclear approval paths, scattered context, and production decisions no agent should make alone.
+### 2/10
 
-### 2/9
+DAOhaus has years of code, community value, and operating history.
 
-DAOhaus is a mature protocol with years of code and active community value.
+That history is an asset. It also creates context debt.
 
-Maintenance context spread across repos, docs, Discord, DNS, dependencies, support paths, and contributor memory.
+Maintenance knowledge can spread across repos, docs, Discord, DNS, dependencies, support paths, and contributor memory.
 
-That is not a DAOhaus problem.
+### 3/10
 
-That is the default state of mature web3 software.
+That is not a DAOhaus-only problem.
 
-### 3/9
+It is the default state of mature web3 software.
 
-The lazy move would be to bolt an agent on top and call it modernization.
+The product still matters. The community still cares. But new maintainers need more context before they can safely change anything.
 
-We refused.
+### 4/10
 
-Make the system legible first. Then let AI work inside guardrails humans can inspect.
+The easy story would be: add agents, call it modernization.
 
-No black-box agents touching production. No "trust us, the model has it."
+We do not buy that.
 
-### 4/9
+Before automation can help, humans need to know what is active, what is deprecated, what can break, and who approves meaningful changes.
 
-The raid had one job:
+### 5/10
 
-turn implicit knowledge into durable operating context.
+The Hauskeeper raid focused on making the system maintainable first:
 
-That meant cutting before adding: clarifying active vs. deprecated surfaces, reducing repo/package indirection, and giving the Admin App a cleaner path for future maintainers.
+- clearer Admin App structure
+- less legacy package complexity
+- stronger maintainer docs
+- runbooks and handoff materials
+- cleaner support and stewardship paths
 
-### 5/9
-
-Some concrete outputs:
-
-The Admin App moved to a clearer standalone structure.
-
-Path aliases went from roughly 12 competing routes to 3 stable roots.
-
-The handoff packet became 8 docs covering architecture, inventory, access, runbooks, AI workflows, risks, and stewardship.
-
-### 6/9
+### 6/10
 
 Then we layered in Refactory.
 
-AI-assisted workflows with human review at every meaningful gate: intake, triage, implementation, review, merge, incidents, and production-affecting changes.
+Not as a black box.
 
-The agent handles groundwork.
+As a governed workflow for intake, triage, context retrieval, implementation support, review, and reporting.
+
+Agents handle groundwork.
 
 Humans handle decisions.
 
-### 7/9
+### 7/10
 
-DAOhaus walked away with clearer maintainer context: stronger docs, cleaner support surfaces, transition-ready runbooks, and AI assistance that augments humans.
+That distinction matters.
 
-That is the part most "AI ops" pitches skip.
+Agents can help investigate, summarize, prepare branches, draft changes, and report status.
 
-The operating model matters.
+Humans still own approvals, pull requests, merges, incidents, access changes, and production-affecting work.
 
-### 8/9
+### 8/10
+
+The real shift was from implicit knowledge to durable operating context.
+
+That is what makes AI assistance safer:
+
+clearer systems, reusable docs, visible review gates, and workflows maintainers can inspect.
+
+### 9/10
 
 This started inside Raid Guild's own AI workflow experiments.
 
@@ -90,11 +94,9 @@ Now it is a repeatable pattern:
 
 legacy complexity -> clearer systems -> governed AI assistance -> better maintainer leverage
 
-Mature web3 teams need this more than another agent demo.
+### 10/10
 
-### 9/9
-
-If your protocol has live users, scar tissue, and too much context trapped in heads that moved on, that is the work.
+If your protocol has live users, valuable history, and too much maintenance context trapped in old systems, that is the work.
 
 We do raids.
 
