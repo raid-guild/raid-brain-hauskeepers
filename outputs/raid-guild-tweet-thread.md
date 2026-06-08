@@ -1,17 +1,5 @@
 # Raid Guild Tweet Thread Draft
 
-## Needs
-
-- portal article to link to - when can we allow those to be public?
-
-## Suggested Visual Asset
-
-- Thread header graphic: "From legacy complexity to progressive automation."
-- Simple graphic: mature protocol surface -> clearer context -> human-governed AI workflow.
-- Optional case study cover with DAOhaus + Raid Guild identity.
-
----
-
 ## Thread
 
 ### 1/9
@@ -100,10 +88,10 @@ We do raids.
 
 Tell us what is hard to maintain:
 
-`https://www.raidguild.org/contact`
+`https://www.raidguild.ai/contact`
 
 ## Optional Case Study CTA
 
-Read the full DAOhaus case study: `[CASE STUDY URL]`
+Read the full DAOhaus case study: https://portal.raidguild.org/posts/from-legacy-complexity-to-progressive-automation-the-daohaus-hauskeeper-raid
 
 Explore Refactory: `https://refactory.superprism.io/`

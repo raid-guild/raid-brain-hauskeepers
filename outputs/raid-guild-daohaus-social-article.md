@@ -1,28 +1,10 @@
 # Raid Guild DAOhaus Social Article Draft
 
-## Purpose
+## LinkedIn Intro
 
-Abbreviated version of the Raid Guild DAOhaus case study for X Articles and LinkedIn Articles. This can replace or complement the tweet thread when the channel supports a longer post.
+Mature software teams do not need AI theater. They need a credible path to automation that preserves human judgment.
 
-## Suggested Visual Asset
-
-- Header graphic: "From legacy complexity to progressive automation."
-- Optional case study cover with DAOhaus + Raid Guild identity.
-- Optional simple diagram: legacy surface -> durable context -> governed AI workflow.
-
----
-
-## Intro Post For X
-
-AI transformation is easy to promise and hard to operate.
-
-For mature web3 protocols, the real challenge is not "can an agent help?"
-
-It is whether the system around that agent is ready: clear repos, trustworthy docs, support intake, review gates, and human approval where it matters.
-
-DAOhaus brought Raid Guild exactly that kind of challenge.
-
-Here is how the raid moved from legacy complexity to progressive automation.
+The DAOhaus Hauskeeper raid gave Raid Guild a chance to apply that pattern in a real protocol maintenance environment: clarify the operating surface, make context durable, and introduce AI-assisted workflows governed by human review.
 
 ## Article
 
@@ -74,22 +56,8 @@ legacy complexity -> clearer systems -> governed AI assistance -> better maintai
 
 Raid Guild can help mature web3 teams walk that road.
 
-Start a raid: `https://www.raidguild.org/contact`
+Start a raid: https://www.raidguild.ai/
 
-Explore Refactory: `https://refactory.superprism.io/`
+Explore Refactory: https://refactory.superprism.io/
 
-Read the full case study: `[CASE STUDY URL]`
-
-## LinkedIn Intro Variant
-
-Mature software teams do not need AI theater. They need a credible path to automation that preserves human judgment.
-
-The DAOhaus Hauskeeper raid gave Raid Guild a chance to apply that pattern in a real protocol maintenance environment: clarify the operating surface, make context durable, and introduce AI-assisted workflows governed by human review.
-
-## X Short Intro Variant
-
-Mature protocols do not need blind autonomy.
-
-They need progressive automation: clearer systems, durable context, AI-assisted workflows, and human approval where it matters.
-
-That was the DAOhaus Hauskeeper raid.
+Read the full case study: https://portal.raidguild.org/posts/from-legacy-complexity-to-progressive-automation-the-daohaus-hauskeeper-raid

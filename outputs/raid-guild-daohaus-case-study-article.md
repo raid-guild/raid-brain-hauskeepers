@@ -99,6 +99,6 @@ Raid Guild helped DAOhaus turn a complex maintenance surface into a clearer foun
 
 For protocols with live users and accumulated complexity, that is the practical path to AI transformation. Not blind autonomy. Progressive automation, grounded in human control.
 
-Start a raid with Raid Guild: `https://www.raidguild.org/contact`
+Start a raid with Raid Guild: `https://www.raidguild.ai/`
 
 Explore Refactory from Superprism: `https://refactory.superprism.io/`
